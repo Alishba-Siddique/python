@@ -1,0 +1,19 @@
+name: Create Daily Issues
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight
+
+jobs:
+  create-issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Daily Issue
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DAY=$(date +%d)
+          DATE=$(date +%m/%d/%Y)
+          ISSUE_TITLE="Day ${DAY}: Progress for ${DATE}"
+          ISSUE_BODY="# Day ${DAY}: Progress for ${DATE}\n\n- [ ] Complete Lesson 1: Introduction to Python\n- [ ] Complete Lesson 2: Data Types\n- [ ] Practice Exercises"
+          curl -H "Authorization: token $GITHUB_TOKEN" -X POST -d "{\"title\":\"${ISSUE_TITLE}\", \"body\":\"${ISSUE_BODY}\"}" https://api.github.com/repos/YOUR_USERNAME/YOUR_REPOSITORY/issues
