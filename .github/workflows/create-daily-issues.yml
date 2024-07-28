@@ -16,4 +16,4 @@ jobs:
           DATE=$(date +%m/%d/%Y)
           ISSUE_TITLE="Day ${DAY}: Progress for ${DATE}"
           ISSUE_BODY="# Day ${DAY}: Progress for ${DATE}\n\n- [ ] Complete Lesson 1: Introduction to Python\n- [ ] Complete Lesson 2: Data Types\n- [ ] Practice Exercises"
-          curl -H "Authorization: token $GITHUB_TOKEN" -X POST -d "{\"title\":\"${ISSUE_TITLE}\", \"body\":\"${ISSUE_BODY}\"}" https://api.github.com/repos/YOUR_USERNAME/YOUR_REPOSITORY/issues
+          curl -H "Authorization: token $GITHUB_TOKEN" -X POST -d "{\"title\":\"${ISSUE_TITLE}\", \"body\":\"${ISSUE_BODY}\"}" https://api.github.com/repos/Alishba-Siddique/python/issues
