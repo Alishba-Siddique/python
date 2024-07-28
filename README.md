@@ -6,7 +6,7 @@
 
 | Day      | Date     | Progress     | Progress
 | :---        |    :----:   |    :----:   | :---        |
-| D-30      | 7/28/2024       | - [ ]   | Here's this   |
+| D-30      | 7/28/2024       | - [ ] eork  | Here's this   |
 | D-29   | 7/29/2024        | - [ ]      | And more      |
 | D-28   | 7/30/2024        | - [ ]      | And more      |
 | D-27   | 7/31/2024        | [ ]      | And more      |
